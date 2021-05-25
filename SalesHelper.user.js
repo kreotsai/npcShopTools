@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         NPC Sales Helper
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Scripts relating to shop sales! Auto fills your shop till & adds a visual total sales amount on the Sales History page.
 // @author       plushies
 // @include      https://neopetsclassic.com/market/till/*
 // @include      https://www.neopetsclassic.com/market/till/*
 // @include      https://neopetsclassic.com/market/sales/*
 // @include      https://www.neopetsclassic.com/market/sales/*
-// @updateURL    https://raw.githubusercontent.com/kreotsai/npcShopTools/main/npcShopTools.user.js
-// @downloadURL  https://raw.githubusercontent.com/kreotsai/npcShopTools/main/npcShopTools.user.js
+// @updateURL    https://raw.githubusercontent.com/kreotsai/npcShopTools/main/SalesHelper.user.js
+// @downloadURL  https://raw.githubusercontent.com/kreotsai/npcShopTools/main/SalesHelper.user.js
 // @icon         https://www.google.com/s2/favicons?domain=neopetsclassic.com
 // @grant        none
 // ==/UserScript==
