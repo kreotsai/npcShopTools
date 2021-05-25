@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         tteeest
+// @name         NPC- Shop Stock Manager
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Buttons to select sets of items to remove from your shop in bulk.
 // @author       plushies
 // @include      https://neopetsclassic.com/market/
