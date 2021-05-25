@@ -27,7 +27,7 @@ var button0 = document.createElement("BUTTON");
 function removeUnpriced()
 {
     setRM(0);
-    console.log("b0");
+    //console.log("b0");
 }
 
 var button1 = document.createElement("BUTTON");
@@ -40,7 +40,7 @@ var button1 = document.createElement("BUTTON");
 function removePriced()
 {
     setRM(1);
-    console.log("b1");
+    //console.log("b1");
 }
 
 
@@ -54,7 +54,7 @@ var button2 = document.createElement("BUTTON");
 function removeAll()
 {
     setRM(2);
-    console.log("b2");
+    //console.log("b2");
 }
 
 
@@ -68,20 +68,20 @@ var button3 = document.createElement("BUTTON");
 function removeNone()
 {
     setRM(3);
-    console.log("b3");
+    //console.log("b3");
 }
 
 
 // Shop Stock
 var shopTable = document.getElementsByClassName("sdbtablebody")
 shopTable = shopTable[0]
-console.log(shopTable)
+//console.log(shopTable)
 
 // Function setRM- set the Rm. Item dropdown to equal how many items are in stock for the given set of items.
 function setRM(input)
 {
     var toRm = input;
-    console.log(toRm);
+    //console.log(toRm);
 
     // On your shop stock page, get the current prices of all items.
     for (var i = 0, row; row = shopTable.rows[i]; i++)
@@ -101,7 +101,7 @@ function setRM(input)
 
                 rm = rm.getElementsByTagName("select")[0]
                 rm.value = rm.options[rm.options.length - 1].value;
-                console.log(rm)
+                //console.log(rm)
                 }
             }
         }
@@ -116,7 +116,7 @@ function setRM(input)
 
                 rm = rm.getElementsByTagName("select")[0]
                 rm.value = rm.options[rm.options.length - 1].value;
-                console.log(rm)
+                //console.log(rm)
                 }
             }
         }
@@ -129,7 +129,7 @@ function setRM(input)
 
                 rm = rm.getElementsByTagName("select")[0]
                 rm.value = rm.options[rm.options.length - 1].value;
-                console.log(rm)
+                //console.log(rm)
                 }
         }
 
@@ -145,10 +145,3 @@ function setRM(input)
         }
     }
 }
-
-
-
-
-
-
-
