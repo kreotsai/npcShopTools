@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         NPC Sales Helper
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Scripts relating to shop sales! Auto fills your shop till & adds a visual total sales amount on the Sales History page.
 // @author       plushies
 // @include      https://neopetsclassic.com/market/till/*
@@ -33,7 +33,7 @@ $('[name="amount"]').val(cashMoney);
 /////////////////////////////
 
 
-var salesHistory = document.querySelector("body > table:nth-child(4) > tbody > tr > td:nth-child(3) > div.content > table");
+var salesHistory = document.querySelector("body > table:nth-child(5) > tbody > tr > td:nth-child(3) > div.content > table");
 salesHistory = salesHistory.getElementsByTagName("tr")
 
 var salesList = [];
