@@ -7,6 +7,7 @@
 // @include      https://neopetsclassic.com/market/
 // @include      https://www.neopetsclassic.com/market/
 // @include      https://neopetsclassic.com/safetydeposit/*
+// @include      http://neopetsclassic.com/safetydeposit/*
 // @updateURL    https://raw.githubusercontent.com/kreotsai/npcShopTools/main/shopStockManager.user.js
 // @downloadURL  https://raw.githubusercontent.com/kreotsai/npcShopTools/main/shopStockManager.user.js
 // @icon         https://www.google.com/s2/favicons?domain=neopetsclassic.com
