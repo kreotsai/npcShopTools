@@ -1,11 +1,12 @@
 // ==UserScript==
-// @name         NPC- Shop Stock Manager
+// @name         NPC- Shop Stock & SDB Tools
 // @namespace    http://tampermonkey.net/
-// @version      1.1
-// @description  Buttons to select sets of items to remove from your shop in bulk.
+// @version      1.2
+// @description  Buttons to select sets of items to remove from your shop/SDB in bulk.
 // @author       plushies
 // @include      https://neopetsclassic.com/market/
 // @include      https://www.neopetsclassic.com/market/
+// @include      https://neopetsclassic.com/safetydeposit/*
 // @updateURL    https://raw.githubusercontent.com/kreotsai/npcShopTools/main/shopStockManager.user.js
 // @downloadURL  https://raw.githubusercontent.com/kreotsai/npcShopTools/main/shopStockManager.user.js
 // @icon         https://www.google.com/s2/favicons?domain=neopetsclassic.com
@@ -73,6 +74,19 @@ function removeNone()
     //console.log("b3");
 }
 
+var button4 = document.createElement("BUTTON");
+    button4.id = "button4"
+    button4.innerHTML = "Remove One";
+    button3.style.marginRight = "20px";
+    buttonsDiv.appendChild(button4);
+    document.getElementById("button4").addEventListener("click", removeOne);
+
+function removeOne()
+{
+    setRM(4);
+    //console.log("b3");
+}
+
 
 // Shop Stock
 var shopTable = document.getElementsByClassName("sdbtablebody")
@@ -88,6 +102,7 @@ function setRM(input)
     // On your shop stock page, get the current prices of all items.
     for (var i = 0, row; row = shopTable.rows[i]; i++)
     {
+
         if (row.innerHTML.match(/value="([0-9,\,]*)"/) != null)
         {
         var price = row.innerHTML.match(/value="([0-9,\,]*)"/)[1]
@@ -97,6 +112,7 @@ function setRM(input)
         {
             if (price == 0)
             {
+
                 if (row.getElementsByClassName("sdbtd")[5] != undefined)
                 {
                 var rm = row.getElementsByClassName("sdbtd")[5];
@@ -104,6 +120,7 @@ function setRM(input)
                 rm = rm.getElementsByTagName("select")[0]
                 rm.value = rm.options[rm.options.length - 1].value;
                 //console.log(rm)
+
                 }
             }
         }
@@ -144,6 +161,20 @@ function setRM(input)
                 rm = rm.getElementsByTagName("select")[0]
                 rm.value = 0
                 }
+
         }
+        //to rm 1, clean later
+                if (toRm == 4)
+        {
+                if (row.getElementsByClassName("sdbtd")[5] != undefined)
+                {
+                rm = row.getElementsByClassName("sdbtd")[5];
+
+                rm = rm.getElementsByTagName("select")[0]
+                rm.value = 1
+                }
+
+        }
+
     }
 }
